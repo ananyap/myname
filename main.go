@@ -1,15 +1,41 @@
 package main
 
 import (
+	"github.com/foolin/goview/supports/ginview"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
+	router := gin.Default()
+
+	//new template engine
+	router.HTMLRender = ginview.Default()
+
+	router.GET("/", func(ctx *gin.Context) {
+		//render with master
+		ctx.HTML(http.StatusOK, "index", gin.H{
+			"title": "Index title!",
+			"add": func(a int, b int) int {
+				return a + b
+			},
 		})
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+
+	router.GET("/home", func(ctx *gin.Context) {
+		//render with master
+		ctx.HTML(http.StatusOK, "index", gin.H{
+			"title": "Index title!",
+			"add": func(a int, b int) int {
+				return a + b
+			},
+		})
+	})
+
+	router.GET("/page", func(ctx *gin.Context) {
+		//render only file, must full name with extension
+		ctx.HTML(http.StatusOK, "page.html", gin.H{"title": "Page file title!!"})
+	})
+
+	_ = router.Run(":8080")
 }
