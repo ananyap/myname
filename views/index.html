@@ -1,10 +1,159 @@
 {{define "head"}}
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/views/static/css/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/ae73170842.js" crossorigin="anonymous"></script>
 {{end}}
 
-{{define "content"}}
-<h1>Hello Bootstrap World!!!</h1>
+{{define "navbar"}}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">booksnicestore.com</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar1" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">หน้าแรก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ชื่อสกุล</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">เบอร์โทร</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ทะเบียนรถ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 {{end}}
+
+{{define "slider"}}
+<section id="slider">
+    <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+        <ol class="carousel-indicators">
+            <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+            <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+            <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-1 active">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h1 class="display-3">ภาพคนทั่วไป</h1>
+                        <p>
+                            ขณะที่เรื่องราวของครอบครัวที่พลัดพรากได้กลับมาพบกันอีกครั้งในวันสำคัญ ๆ อย่างวันแต่งงาน ดูเหมือนจะเป็นพล็อตเรื่องที่เจอได้ตามนิยายหรือซีรีส์ แต่ใครจะเชื่อว่ามันได้เกิดขึ้นแล้วจริง ๆ กับครอบครัวหนึ่งในเมืองซูโจว มณฑลเจียงซู ประเทศจีน เมื่อไม่กี่วันที่ผ่านมา เมื่อแม่เจ้าบ่าวที่มาร่วมงานได้พบกับลูกสาวที่หายสาบสูญไปอย่างไม่คาดคิด โดยที่ลูกสาวของเธอ ก็คือเจ้าสาวในพิธีนั่นเอง
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item carousel-image-2">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h1 class="display-3">ภาพคนทั่วไป</h1>
+                        <p>
+                            ขณะที่เรื่องราวของครอบครัวที่พลัดพรากได้กลับมาพบกันอีกครั้งในวันสำคัญ ๆ อย่างวันแต่งงาน ดูเหมือนจะเป็นพล็อตเรื่องที่เจอได้ตามนิยายหรือซีรีส์ แต่ใครจะเชื่อว่ามันได้เกิดขึ้นแล้วจริง ๆ กับครอบครัวหนึ่งในเมืองซูโจว มณฑลเจียงซู ประเทศจีน เมื่อไม่กี่วันที่ผ่านมา เมื่อแม่เจ้าบ่าวที่มาร่วมงานได้พบกับลูกสาวที่หายสาบสูญไปอย่างไม่คาดคิด โดยที่ลูกสาวของเธอ ก็คือเจ้าสาวในพิธีนั่นเอง
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h1 class="display-3">ภาพคนทั่วไป</h1>
+                        <p>
+                            ขณะที่เรื่องราวของครอบครัวที่พลัดพรากได้กลับมาพบกันอีกครั้งในวันสำคัญ ๆ อย่างวันแต่งงาน ดูเหมือนจะเป็นพล็อตเรื่องที่เจอได้ตามนิยายหรือซีรีส์ แต่ใครจะเชื่อว่ามันได้เกิดขึ้นแล้วจริง ๆ กับครอบครัวหนึ่งในเมืองซูโจว มณฑลเจียงซู ประเทศจีน เมื่อไม่กี่วันที่ผ่านมา เมื่อแม่เจ้าบ่าวที่มาร่วมงานได้พบกับลูกสาวที่หายสาบสูญไปอย่างไม่คาดคิด โดยที่ลูกสาวของเธอ ก็คือเจ้าสาวในพิธีนั่นเอง
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+{{end}}
+
+{{define "service"}}
+<section id="service" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-signature fa-5x mb-2"></i>
+                <h3>ตั้งชื่อสกุล</h3>
+                <p>การเรียกชื่อ หรือการทำธุรกรรมต่างๆ ก็ต้องลงนามด้วยชื่อสกุล ท่านทราบไหมว่า เลขประจำตัวจากชื่อคุณจะถูกเรียกให้แสดงผลเสมอ</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-tty fa-5x mb-2"></i>
+                <h3>เบอร์โทรศัพท์</h3>
+                <p>การต่อรองทางธุรกิจ ครอบครัว ความรัก คุณมักใช้โทรศัพท์เบอร์นี้ในการสื่อสารใช่หรือไม่? เจ้าเบอร์นี้แหละ มันติดตัวคุณ ที่สนิทยิ่งกว่าแฟน</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-car-side fa-5x mb-2"></i>
+                <h3>เลขทะเบียนรถ</h3>
+                <p>มีเงินซื้อรถราคาเป็นล้าน ประมูลเบอร์ราคาเป็นแสน แล้วจะซื้อชีวิตและครอบครัวราคาเท่าไหร่ดี ? ชีวิตไม่มีขาย แต่คุณเลือกได้</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}
+
+{{define "about"}}
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-signature fa-5x mb-2"></i>
+                <h3>ตั้งชื่อสกุล</h3>
+                <p>การเรียกชื่อ หรือการทำธุรกรรมต่างๆ ก็ต้องลงนามด้วยชื่อสกุล ท่านทราบไหมว่า เลขประจำตัวจากชื่อคุณจะถูกเรียกให้แสดงผลเสมอ</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-tty fa-5x mb-2"></i>
+                <h3>เบอร์โทรศัพท์</h3>
+                <p>การต่อรองทางธุรกิจ ครอบครัว ความรัก คุณมักใช้โทรศัพท์เบอร์นี้ในการสื่อสารใช่หรือไม่? เจ้าเบอร์นี้แหละ มันติดตัวคุณ ที่สนิทยิ่งกว่าแฟน</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <i class="fas fa-car-side fa-5x mb-2"></i>
+                <h3>เลขทะเบียนรถ</h3>
+                <p>มีเงินซื้อรถราคาเป็นล้าน ประมูลเบอร์ราคาเป็นแสน แล้วจะซื้อชีวิตและครอบครัวราคาเท่าไหร่ดี ? ชีวิตไม่มีขาย แต่คุณเลือกได้</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}
+
+{{define "gallery"}}
+<section id="gallery" class="p-5">
+    <div class="container">
+        <h1 class="text-center">ผลงานของเรา</h1>
+        <p class="text-center">การเรียกชื่อ หรือการทำธุรกรรมต่างๆ ก็ต้องลงนามด้วยชื่อสกุล ท่านทราบไหมว่า เลขประจำตัวจากชื่อคุณจะถูกเรียกให้แสดงผลเสมอ</p>
+        <div class="row mb-4">
+            <div class="col-md-4 my-pic">
+                <img src="https://live.staticflickr.com/65535/51097523962_d8a8643166_w.jpg" alt="#" class="img-fluid">
+            </div>
+            <div class="col-md-4 my-pic">
+                <img src="https://live.staticflickr.com/3564/3360322975_9f5f2025b1_w.jpg" alt="#" class="img-fluid">
+            </div>
+            <div class="col-md-4 my-pic">
+                <img src="https://live.staticflickr.com/65535/51097331506_b5b8a5301b_w.jpg" alt="#" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+</section>
+{{end}}
+
 
